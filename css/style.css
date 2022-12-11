@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+:root{
+    --main-color:#8e44ad;
+    --black:#222;
+    --white:#fff;
+    --light-black:#777;
+    --light-white:#fff9;
+    --dark-bg:rgba(0,0,0,.7);
+    --ligth-bg:#eee;
+    --border:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+}
+
+*{
+font-family: 'Roboto', sans-serif;
+margin: 0; padding: 0;
+box-sizing: border-box;
+border: none;
+text-decoration: none;
+outline: none;
+text-transform: capitalize;
+
+    }
+html{
+    font-size: 65%;
+    overflow-x: hidden;
+    background: #8e44ad;
+}
+section{
+    padding: 4rem 10%;
+}
+.btn{
+    display: inline-block;
+    font-size: 2.7rem;
+    background: var(--main-color);
+    color: var(--white);
+    cursor: pointer;
+}
+.btn:hover{
+   background: var(--black); 
+}
+/*Mise en forme du header */
+.header{
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 1000 !important;
+    background: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+}
+.header .logo{
+font-size: 3rem;
+color: blue;
+text-transform: uppercase;
+}
+.header .navbar{
+    z-index: 1000;  
+}
+#menu-btn{
+    font-size: 2.5rem;
+    display: inline-block;
+    transition: 3s linear;
+    cursor: pointer;
+}
+#menu-btn{
+    transform: rotate(180deg);
+}
+.header .navbar{
+    position: absolute;
+    top: 99%; left: 0; right: 0;
+    background: var(--white);
+    padding: 2rem;
+    border-top: var(--border);
+    transition: .3s linear;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.header .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.header .navbar a{
+    display: block;
+    text-align: center;
+    margin: 2rem;
+}
+.header .navbar a{
+    font-size: 5rem;
+    margin: 2rem;
+    color: var(--black);
+}
+.header .navbar a:hover{
+    color: aqua;
+}
+.home{
+    padding: 0;
+}
+.home .slide{
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center;
+    min-height: 60rem;
+}
+.home .slide .content{
+    width: 100rem;
+    height: 85rem;
+}
+.home .slide .content span{
+    display: block;
+    font-size: 3rem;
+    color: blue;
+    padding-bottom: 1rem;
+}
+.home .slide .content h3{
+    font-size: 6vw;
+    color: yellow;
+    text-transform: uppercase;
+    line-height: 1;
+    text-shadow: var(--text-shadow);
+    padding: 1rem 0;
+}
+.home-packages{
+    background: var(--ligth-bg);
+}
+.home-packages .box-container{
+   display: grid; 
+   grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+   gap: 2rem;
+}
+.home-packages .box-container .box{
+border: var(--border);
+box-shadow: var(--box-shadow);
+background: var(--white);
+}
+.home-packages .box-container .box .image{
+    height: 25rem;
+    overflow: hidden;
+}
+.home-packages .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+.home-offer{
+    text-align: center;
+}
+.home-offer .content{
+    max-width: 70rem;
+    margin: 0 auto;
+}
+.home-offer .content h3{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: var(--white);
+}
+.home-offer .content p{
+    font-size: 1.5rem;
+   color: aqua;
+   line-height: 2.5rem;
+   padding: 1rem 0;
+}
+.home-offer .btn{
+    background-color: darkgreen;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+    height: 7rem;
+    width: 7rem;
+    background: var(--main-color);
+    color: var(--white);
+}
+.footer{
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    }
+    .footer .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+        gap: 2rem;
+    }
+    .footer .box-container .box h3{
+        color: blue;
+        font-size: 5.5rem;
+        display: block;
+    }
+    .footer .box-container .box a{
+       color: blue;
+       font-size: 2.5rem;
+       display: block;
+    }
+    .footer .box-container .box a i{
+        color: var(--main-color);
+        padding-right: 20rem;
+    }
+.swiper-button-next:hover
+.swiper-button-prev:hover{
+    height: 7rem;
+    width: 7rem;
+    background: var(--main-color);
+    color: var(--white);
+}
+
+.home-about{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.home-about .image img{
+    width: 100%;
+    justify-content: center;
+}
+* {
+    border-radius: 30px;
+    padding: 8px; 
+    text-align: center;
+    }
+    body {
+        min-height: 1000vh;
+        transition: .5s;
+        }
+    .show{
+        visibility: visible;
+        }
+        .mousseEvent {
+        font-size: 2rem;
+        border: 6px solid salmon;
+        transform: translateX(-50%);
+        padding: 10px;
+        justify-content: center;
+        }
+        .themeContainer {
+        position: fixed;
+        top: 0;
+        }
+        .theme {
+            height: 10px;
+            width: 10px;
+            cursor: pointer;
+        }
+h1{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+h2{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    color: #222;
+}
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(16rem,1fr));
+    gap: 1.5rem;
+}
+.services .box-container .box{
+    font-size: 2rem;
+    text-align: center;
+    background: var(--white);
+    padding: 3rem 2rem;
+    cursor: pointer;
+}
+.services .box-container .box :hover{
+    background: blue;
+}
+.home-about{
+   display: flex; 
+}
+.home-about .image{
+    flex: 1 1 500rem;
+}
+.home-about .image img{
+   width: 100%rem; 
+   height: 100%rem;
+}
+.home-about .content{
+    flex: 1 1 500rem;
+    padding: 3rem;
+    background-color: yellowgreen;
+}
+#menu-btn{
+    display: inline-block;
+    transition: .5s linear;
+}
+@media(max-width:1200px){
+  section {
+    padding: 3rem 5%;
+  } 
+} 
+#menu-btn{
+    transform: rotate(180deg);
+}
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    section{
+        padding: 3rem 2rem;
+    }
+    }
+@media(max-width:768px){
+
+}
+
+@media(max-width:450px){
+   html{ font-size: 50%;
+    }
+}
+
+
